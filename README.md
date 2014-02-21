@@ -1,0 +1,4 @@
+FMConstraintSwitch
+==================
+
+FMConstraintSwitch cocoapod

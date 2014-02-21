@@ -8,25 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E133869218B7E911004ED023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E133869118B7E911004ED023 /* Foundation.framework */; };
-		E133869718B7E912004ED023 /* FMGrowingTextView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E133869618B7E912004ED023 /* FMGrowingTextView.h */; };
-		E133869918B7E912004ED023 /* FMGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E133869818B7E912004ED023 /* FMGrowingTextView.m */; };
-		E13386A018B7E912004ED023 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E133869F18B7E912004ED023 /* XCTest.framework */; };
-		E13386A118B7E912004ED023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E133869118B7E911004ED023 /* Foundation.framework */; };
-		E13386A318B7E912004ED023 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13386A218B7E912004ED023 /* UIKit.framework */; };
-		E13386A618B7E912004ED023 /* libFMGrowingTextView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E133868E18B7E911004ED023 /* libFMGrowingTextView.a */; };
-		E13386AC18B7E912004ED023 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E13386AA18B7E912004ED023 /* InfoPlist.strings */; };
-		E13386AE18B7E912004ED023 /* FMGrowingTextViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E13386AD18B7E912004ED023 /* FMGrowingTextViewTests.m */; };
+		E13386BA18B7E95C004ED023 /* FMGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E13386B918B7E95C004ED023 /* FMGrowingTextView.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E13386A418B7E912004ED023 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E133868618B7E911004ED023 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E133868D18B7E911004ED023;
-			remoteInfo = FMGrowingTextView;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E133868C18B7E911004ED023 /* CopyFiles */ = {
@@ -35,7 +18,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				E133869718B7E912004ED023 /* FMGrowingTextView.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,15 +26,14 @@
 /* Begin PBXFileReference section */
 		E133868E18B7E911004ED023 /* libFMGrowingTextView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFMGrowingTextView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E133869118B7E911004ED023 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E133869518B7E911004ED023 /* FMGrowingTextView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMGrowingTextView-Prefix.pch"; sourceTree = "<group>"; };
-		E133869618B7E912004ED023 /* FMGrowingTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMGrowingTextView.h; sourceTree = "<group>"; };
-		E133869818B7E912004ED023 /* FMGrowingTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMGrowingTextView.m; sourceTree = "<group>"; };
-		E133869E18B7E912004ED023 /* FMGrowingTextViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMGrowingTextViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E133869518B7E911004ED023 /* FMGrowingTextView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FMGrowingTextView-Prefix.pch"; path = "../FMGrowingTextView-Prefix.pch"; sourceTree = "<group>"; };
 		E133869F18B7E912004ED023 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E13386A218B7E912004ED023 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		E13386A918B7E912004ED023 /* FMGrowingTextViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FMGrowingTextViewTests-Info.plist"; sourceTree = "<group>"; };
-		E13386AB18B7E912004ED023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E13386AD18B7E912004ED023 /* FMGrowingTextViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMGrowingTextViewTests.m; sourceTree = "<group>"; };
+		E13386B818B7E95C004ED023 /* FMGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMGrowingTextView.h; sourceTree = "<group>"; };
+		E13386B918B7E95C004ED023 /* FMGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMGrowingTextView.m; sourceTree = "<group>"; };
+		E13386BB18B7EDDF004ED023 /* FMGrowingTextView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = FMGrowingTextView.podspec; sourceTree = SOURCE_ROOT; };
+		E13386BC18B7EDDF004ED023 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		E13386BD18B7EDDF004ED023 /* license.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = license.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,17 +45,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E133869B18B7E912004ED023 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E13386A618B7E912004ED023 /* libFMGrowingTextView.a in Frameworks */,
-				E13386A018B7E912004ED023 /* XCTest.framework in Frameworks */,
-				E13386A318B7E912004ED023 /* UIKit.framework in Frameworks */,
-				E13386A118B7E912004ED023 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				E133869318B7E911004ED023 /* FMGrowingTextView */,
-				E13386A718B7E912004ED023 /* FMGrowingTextViewTests */,
 				E133869018B7E911004ED023 /* Frameworks */,
 				E133868F18B7E911004ED023 /* Products */,
 			);
@@ -92,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				E133868E18B7E911004ED023 /* libFMGrowingTextView.a */,
-				E133869E18B7E912004ED023 /* FMGrowingTextViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,8 +78,7 @@
 		E133869318B7E911004ED023 /* FMGrowingTextView */ = {
 			isa = PBXGroup;
 			children = (
-				E133869618B7E912004ED023 /* FMGrowingTextView.h */,
-				E133869818B7E912004ED023 /* FMGrowingTextView.m */,
+				E13386B718B7E95C004ED023 /* Classes */,
 				E133869418B7E911004ED023 /* Supporting Files */,
 			);
 			path = FMGrowingTextView;
@@ -120,28 +87,22 @@
 		E133869418B7E911004ED023 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E13386BB18B7EDDF004ED023 /* FMGrowingTextView.podspec */,
+				E13386BC18B7EDDF004ED023 /* LICENSE */,
+				E13386BD18B7EDDF004ED023 /* license.txt */,
 				E133869518B7E911004ED023 /* FMGrowingTextView-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E13386A718B7E912004ED023 /* FMGrowingTextViewTests */ = {
+		E13386B718B7E95C004ED023 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E13386AD18B7E912004ED023 /* FMGrowingTextViewTests.m */,
-				E13386A818B7E912004ED023 /* Supporting Files */,
+				E13386B818B7E95C004ED023 /* FMGrowingTextView.h */,
+				E13386B918B7E95C004ED023 /* FMGrowingTextView.m */,
 			);
-			path = FMGrowingTextViewTests;
-			sourceTree = "<group>";
-		};
-		E13386A818B7E912004ED023 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E13386A918B7E912004ED023 /* FMGrowingTextViewTests-Info.plist */,
-				E13386AA18B7E912004ED023 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -162,24 +123,6 @@
 			productName = FMGrowingTextView;
 			productReference = E133868E18B7E911004ED023 /* libFMGrowingTextView.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		E133869D18B7E912004ED023 /* FMGrowingTextViewTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E13386B418B7E912004ED023 /* Build configuration list for PBXNativeTarget "FMGrowingTextViewTests" */;
-			buildPhases = (
-				E133869A18B7E912004ED023 /* Sources */,
-				E133869B18B7E912004ED023 /* Frameworks */,
-				E133869C18B7E912004ED023 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E13386A518B7E912004ED023 /* PBXTargetDependency */,
-			);
-			name = FMGrowingTextViewTests;
-			productName = FMGrowingTextViewTests;
-			productReference = E133869E18B7E912004ED023 /* FMGrowingTextViewTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -203,59 +146,20 @@
 			projectRoot = "";
 			targets = (
 				E133868D18B7E911004ED023 /* FMGrowingTextView */,
-				E133869D18B7E912004ED023 /* FMGrowingTextViewTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		E133869C18B7E912004ED023 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E13386AC18B7E912004ED023 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E133868A18B7E911004ED023 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E133869918B7E912004ED023 /* FMGrowingTextView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E133869A18B7E912004ED023 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E13386AE18B7E912004ED023 /* FMGrowingTextViewTests.m in Sources */,
+				E13386BA18B7E95C004ED023 /* FMGrowingTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E13386A518B7E912004ED023 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E133868D18B7E911004ED023 /* FMGrowingTextView */;
-			targetProxy = E13386A418B7E912004ED023 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E13386AA18B7E912004ED023 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E13386AB18B7E912004ED023 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E13386AF18B7E912004ED023 /* Debug */ = {
@@ -333,7 +237,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/FMGrowingTextView.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FMGrowingTextView/FMGrowingTextView-Prefix.pch";
+				GCC_PREFIX_HEADER = "FMGrowingTextView-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -345,48 +249,10 @@
 			buildSettings = {
 				DSTROOT = /tmp/FMGrowingTextView.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FMGrowingTextView/FMGrowingTextView-Prefix.pch";
+				GCC_PREFIX_HEADER = "FMGrowingTextView-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		E13386B518B7E912004ED023 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FMGrowingTextView/FMGrowingTextView-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "FMGrowingTextViewTests/FMGrowingTextViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		E13386B618B7E912004ED023 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FMGrowingTextView/FMGrowingTextView-Prefix.pch";
-				INFOPLIST_FILE = "FMGrowingTextViewTests/FMGrowingTextViewTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -407,14 +273,6 @@
 			buildConfigurations = (
 				E13386B218B7E912004ED023 /* Debug */,
 				E13386B318B7E912004ED023 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		E13386B418B7E912004ED023 /* Build configuration list for PBXNativeTarget "FMGrowingTextViewTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E13386B518B7E912004ED023 /* Debug */,
-				E13386B618B7E912004ED023 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
