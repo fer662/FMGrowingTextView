@@ -1,0 +1,14 @@
+PODS:
+  - FMGrowingTextView (0.0.1)
+
+DEPENDENCIES:
+  - FMGrowingTextView (from `../FMGrowingTextView.podspec`)
+
+EXTERNAL SOURCES:
+  FMGrowingTextView:
+    :podspec: ../FMGrowingTextView.podspec
+
+SPEC CHECKSUMS:
+  FMGrowingTextView: 4d5946af18f4eb3fa2bbd47d3f20da2958a86325
+
+COCOAPODS: 0.29.0
