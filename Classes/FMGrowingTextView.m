@@ -55,15 +55,17 @@
                 [self.delegate textViewWillChangeHeight:self];
             }
             
-            [UIView animateWithDuration:self.animationDuration delay:0
-                                options:self.animationOptions animations:^{
-                                    [self.viewToLayout setNeedsLayout];
-                                    [self.viewToLayout layoutIfNeeded];
-                                } completion:^(BOOL finished) {
-                                    if ([self.delegate respondsToSelector:@selector(textViewDidChangeHeight:)]) {
-                                        [self.delegate textViewWillChangeHeight:self];
-                                    }
-                                }];
+            [UIView animateWithDuration:self.animationDuration
+                                  delay:0
+                                options:self.animationOptions | UIViewAnimationOptionBeginFromCurrentState
+                             animations:^{
+                                 [self.viewToLayout setNeedsLayout];
+                                 [self.viewToLayout layoutIfNeeded];
+                             } completion:^(BOOL finished) {
+                                 if ([self.delegate respondsToSelector:@selector(textViewDidChangeHeight:)]) {
+                                     [self.delegate textViewWillChangeHeight:self];
+                                 }
+                             }];
         }
         else {
             if ([self.delegate respondsToSelector:@selector(textViewWillChangeHeight:)]) {
