@@ -49,15 +49,19 @@
 @property (nonatomic, weak) IBOutlet UIView *viewToLayout;
 @property (nonatomic, weak) IBOutlet id<FMGrowingTextViewDelegate> delegate;
 
-/**
- convenience method to set maximumHeight the the correct value to completely display the passed amount of lines
- */
-- (void)setMinimumHeightWithNumberOfLines:(NSUInteger)numberOfLines;
+- (void)setMinimumHeight:(CGFloat)minimumHeight animated:(BOOL)animated completion:(dispatch_block_t)completion;
+
+- (void)setMaximumHeight:(CGFloat)maximumHeight animated:(BOOL)animated completion:(dispatch_block_t)completion;
 
 /**
  convenience method to set maximumHeight the the correct value to completely display the passed amount of lines
  */
-- (void)setMaximumHeightWithNumberOfLines:(NSUInteger)numberOfLines;
+- (void)setMinimumHeightWithNumberOfLines:(NSUInteger)numberOfLines animated:(BOOL)animated completion:(dispatch_block_t)completion;
+
+/**
+ convenience method to set maximumHeight the the correct value to completely display the passed amount of lines
+ */
+- (void)setMaximumHeightWithNumberOfLines:(NSUInteger)numberOfLines animated:(BOOL)animated completion:(dispatch_block_t)completion;
 
 /**
  returns actual the height for the textView depending on it's contentHeight. Default implementation only ensures
