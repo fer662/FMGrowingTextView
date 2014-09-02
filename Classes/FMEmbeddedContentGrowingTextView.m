@@ -10,12 +10,8 @@
 
 @interface FMEmbeddedContentGrowingTextView () <FMGrowingTextViewDelegate>
 
-@property (nonatomic, assign) NSObject<FMEmbeddedContentGrowingTextViewDelegate>* realDelegate;
-
-@property (nonatomic, strong) NSLayoutConstraint *contentLeftLayoutConstraint;
-@property (nonatomic, strong) NSLayoutConstraint *contentTopLayoutConstraint;
-@property (nonatomic, strong) NSLayoutConstraint *contentWidthLayoutConstraint;
-@property (nonatomic, strong) NSLayoutConstraint *contentHeightLayoutConstraint;
+@property (nonatomic, weak) NSObject<FMEmbeddedContentGrowingTextViewDelegate>* realDelegate;
+@property (nonatomic, assign) UIEdgeInsets realTextContainerInsets;
 
 @end
 
@@ -35,23 +31,45 @@
 {
     [super awakeFromNib];
     [self embeddedContentGrowingTextView_initialize];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.hasInsertedContent = YES;
-    });
 }
 
 - (void)embeddedContentGrowingTextView_initialize
 {
     super.delegate = self;
     
-    self.embeddedContentView = [[UIView alloc] initWithFrame:CGRectMake(8, 8, 64, 64)];
-    self.embeddedContentView.backgroundColor = [UIColor blackColor];
+    self.realTextContainerInsets = UIEdgeInsetsMake(8, 0, 8, 0);
+    self.embeddedContentInsets = UIEdgeInsetsMake(4, 4, 4, 4);
+    self.embeddedContentSize = CGSizeMake(64, 64);
+    
+    self.embeddedContentView = [[UIView alloc] initWithFrame:CGRectMake(self.embeddedContentInsets.left,
+                                                                        self.embeddedContentInsets.top,
+                                                                        self.embeddedContentSize.width,
+                                                                        self.embeddedContentSize.height)];
+    self.embeddedContentView.backgroundColor = [UIColor grayColor];
     self.embeddedContentView.layer.cornerRadius = 5;
     self.embeddedContentView.layer.masksToBounds = YES;
     self.embeddedContentView.hidden = YES;
     
     [self addSubview:self.embeddedContentView];
     [self setNeedsUpdateConstraints];
+}
+
+- (void)setEmbeddedContentInsets:(UIEdgeInsets)embeddedContentInsets
+{
+    _embeddedContentInsets = embeddedContentInsets;
+    [self setHasInsertedContent:_hasInsertedContent forceUpdate:YES];
+}
+
+- (void)setEmbeddedContentSize:(CGSize)embeddedContentSize
+{
+    _embeddedContentSize = embeddedContentSize;
+    [self setHasInsertedContent:_hasInsertedContent forceUpdate:YES];
+}
+
+- (void)setTextContainerInset:(UIEdgeInsets)textContainerInset
+{
+    _realTextContainerInsets = textContainerInset;
+    [self setHasInsertedContent:_hasInsertedContent forceUpdate:YES];
 }
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView
@@ -132,19 +150,27 @@
 
 - (void)setHasInsertedContent:(BOOL)hasInsertedContent
 {
-    if (hasInsertedContent != _hasInsertedContent) {
+    [self setHasInsertedContent:hasInsertedContent forceUpdate:NO];
+}
+
+- (void)setHasInsertedContent:(BOOL)hasInsertedContent forceUpdate:(BOOL)forceUpdate
+{
+    if (hasInsertedContent != _hasInsertedContent || forceUpdate) {
         _hasInsertedContent = hasInsertedContent;
         self.embeddedContentView.hidden = !hasInsertedContent;
         
         if (!hasInsertedContent) {
-            self.textContainerInset = UIEdgeInsetsMake(8, 0, 8, 0);
+            super.textContainerInset = self.realTextContainerInsets;
             [self setMinimumHeightWithNumberOfLines:1 animated:NO completion:^{}];
         }
         else {
-            self.textContainerInset = UIEdgeInsetsMake(64 + 12, 0, 0, 0);
-            [self setMinimumHeight:64 + 12 animated:YES completion:^{}];
+            super.textContainerInset = UIEdgeInsetsMake(self.embeddedContentSize.height + self.embeddedContentInsets.top + self.embeddedContentInsets.bottom,
+                                                       self.realTextContainerInsets.left,
+                                                       self.realTextContainerInsets.bottom,
+                                                       self.realTextContainerInsets.right);
+            [self setMinimumHeight:self.embeddedContentSize.height + self.embeddedContentInsets.top + self.embeddedContentInsets.bottom animated:YES completion:^{}];
         }
-
+        
         self.text = [self.text stringByAppendingString:@" "];
         self.text = [self.text substringToIndex:self.text.length - 1];
         [self setNeedsDisplay];

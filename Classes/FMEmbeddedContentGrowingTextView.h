@@ -22,6 +22,9 @@
 
 @property (nonatomic, strong) UIView *embeddedContentView;
 
+@property (nonatomic, assign) UIEdgeInsets embeddedContentInsets;
+@property (nonatomic, assign) CGSize embeddedContentSize;
+
 - (NSString *)sanitizedText;
 
 @property (nonatomic, strong) UIResponder *overrideNextResponder;

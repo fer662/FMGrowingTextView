@@ -7,11 +7,11 @@
 //
 
 #import "FMViewController.h"
-#import <FMGrowingTextView/FMGrowingTextView.h>
+#import <FMGrowingTextView/FMEmbeddedContentGrowingTextView.h>
 
 @interface FMViewController ()
 
-@property (strong, nonatomic) IBOutlet FMGrowingTextView *textView;
+@property (strong, nonatomic) IBOutlet FMEmbeddedContentGrowingTextView *textView;
 @property (strong, nonatomic) IBOutlet UIView *accessoryView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyboardBottomConstraint;
 
@@ -34,7 +34,7 @@
 
 - (IBAction)dismissKeyboard:(id)sender
 {
-    [self.textView endEditing:YES];
+    self.textView.hasInsertedContent = !self.textView.hasInsertedContent;
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification
