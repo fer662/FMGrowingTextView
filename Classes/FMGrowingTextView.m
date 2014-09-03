@@ -32,6 +32,9 @@
         self.font = [UIFont systemFontOfSize:14];
     }
     
+    self.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.textContainerInset = UIEdgeInsetsMake(8, 0, 8, 0);
+    
     [self setMinimumHeightWithNumberOfLines:1 animated:NO completion:^{}];
     [self setMaximumHeightWithNumberOfLines:4 animated:NO completion:^{}];
     

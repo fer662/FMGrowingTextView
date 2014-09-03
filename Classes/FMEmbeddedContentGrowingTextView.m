@@ -10,7 +10,7 @@
 
 @interface FMEmbeddedContentGrowingTextView () <FMGrowingTextViewDelegate>
 
-@property (nonatomic, weak) NSObject<FMEmbeddedContentGrowingTextViewDelegate>* realDelegate;
+@property (nonatomic, assign) NSObject<FMEmbeddedContentGrowingTextViewDelegate>* realDelegate;
 @property (nonatomic, assign) UIEdgeInsets realTextContainerInsets;
 
 @end
@@ -29,15 +29,15 @@
 
 - (void)awakeFromNib
 {
-    [super awakeFromNib];
     [self embeddedContentGrowingTextView_initialize];
+    [super awakeFromNib];
 }
 
 - (void)embeddedContentGrowingTextView_initialize
 {
     super.delegate = self;
     
-    self.realTextContainerInsets = UIEdgeInsetsMake(8, 0, 8, 0);
+    self.realTextContainerInsets = self.textContainerInset;
     self.embeddedContentInsets = UIEdgeInsetsMake(4, 4, 4, 4);
     self.embeddedContentSize = CGSizeMake(64, 64);
     
