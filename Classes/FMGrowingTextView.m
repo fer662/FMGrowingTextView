@@ -10,6 +10,8 @@
 
 @implementation FMGrowingTextView
 
+@dynamic delegate;
+
 #pragma mark - Construction
 
 - (id)initWithFrame:(CGRect)frame

@@ -17,6 +17,7 @@
 
 @implementation FMEmbeddedContentGrowingTextView
 
+@dynamic delegate;
 @synthesize hasInsertedContent = _hasInsertedContent;
 
 - (id)initWithFrame:(CGRect)frame
